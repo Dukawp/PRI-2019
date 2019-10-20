@@ -1,0 +1,8 @@
+a) //ARQELEM[//CONCEL[contains(.,'Amares')]]//IDENTI
+b) distinct-values(//ARQELEM//CONCEL)
+c) //ARQELEM[//CONCEL[contains(.,'Montalegre')]]//DESCRI
+d) Quais os arq referentes a castros
+    //ARQELEM/*//LIGA[..//@TERMO[contains(.,'castro')]]
+e) quantos arq pertecenm ao concelho de amares
+	count(//ARQELEM[//CONCEL[contains(.,'Amares')]])
+			

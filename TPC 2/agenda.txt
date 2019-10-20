@@ -1,0 +1,6 @@
+a)  //entrada/*[..//telefone[starts-with(.,'253')] ] ]
+b)  //entrada/*[..//telefone[not(starts-with(.,'253'))] ]
+c) //entrada/*[..//nome[contains(.,'José' ) or contains(.,'Maria')]  ] 
+d) //grupo/entrada//@id
+e) /*//entrada[@tipo[not((contains(.,'pessoa')))]]//@id 
+   ou //entrada[@tipo   != 'pessoa' ]//@id 

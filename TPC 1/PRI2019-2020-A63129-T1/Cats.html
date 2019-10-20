@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+
+<head> 
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Theme CSS -->
+    <link href="css/tema.css" rel="stylesheet">
+
+    <title>MIAU</title>
+
+
+</head>
+
+<!--  w3-container no body para trocar a cor de fundo-->
+<body class="w3-container w3-animate-zoom">
+
+<!-- Barra superior-->
+    <ul class="bar">
+        <li class="bar"> 
+            <a class="active" href="#inicio">
+                <i class='fas fa-cat'></i> Inicio
+            </a>
+        </li>
+        <li class="bar" id="sobretop"><a href="#sobre">Sobre</a></li>
+        <li class="bar" id="curiosidadestop"><a href="#curiosidades">Curiosidades</a></li>
+        <li class="bar" id="mediatop"><a href="#media">Media</a></li>
+    </ul>
+
+
+    
+    <div class="halfTop">
+        <h1 class="w3-center top w3-myfont" id="inicio" ><strong>Fun with Cat's </strong></h1>
+    </div>
+
+    <div class="w3-container w3-pagetheme">
+
+    <p>Link para a <a href="https://pt.wikipedia.org/wiki/Gato" target="_blank"> Wikipedia sobre gatos</a>.</p>
+
+
+    <p>O gato (felis catus) é um mamífero carnívoro e quadrúpede pertencente à família Felidae e à ordem carnívora. 
+        É um animal doméstico apreciado por caçar ratos e ratazanas. Este animal possui unhas retráteis, 
+        ouvidos e olfacto bem aguçados, uma notável visão noturna e um corpo flexível, musculoso e compacto. 
+        Trata-se de um animal com boa memória e com capacidade de aprender por meio da observação e da experiência.</p>
+
+    <div class="w3-panel">
+        <h1 class="w3-theme w3-center" id="sobre">
+        <a href="#sobretop">Sobre</a>
+
+    </div>
+
+    <h5>Especies de gatos mais conhecidas</h5>
+    <ul class="a">
+        <li>Persa</li>
+        <li>Siamês</li>
+        <li>Himalaia</li>
+        <li>Bengal</li>
+        <li>Maine Coon</li>
+    </ul>
+
+
+    <div class="w3-panel">
+        <h1 class="w3-theme w3-center" id="curiosidades">
+            <a href="#curiosidadestop">Curiosidades</a>
+    </div>
+
+    
+    <h5>Gatos famosos</h5>
+    <ol class="a">
+        <li>
+            <span><a href="https://pt.wikipedia.org/wiki/Garfield" target="_blank"> Garfield</span></a>
+            <img src="img/garfield.jpg" width="20%"/>
+        </li>
+        <li>
+            <span><a href="https://pt.wikipedia.org/wiki/Grumpy_Cat" target="_blank"> Grumpy</span></a>
+            <img src="img/grumpy-cat.jpg" width="20%"/>
+        </li>
+        <li>
+            <span><a href="https://sukicat.com/" target="_blank"> Suki</span></a>
+            <img src="img/suki.jpg" width="20%"/>
+        </li>
+        <li>
+            <span><a href="https://www.instagram.com/wilfredwarrior/" target="_blank"> Wilfred Warrior</span></a>
+            <img src="img/wilf.jpg" width="20%"/>
+        </li>
+        <li>
+            <span><a href="https://en.wikipedia.org/wiki/Cats_That_Look_Like_Hitler" target="_blank"> Kitler</span></a>
+            <img src="img/kitler.jpg" width="20%"/>
+        </li>
+    </ol>
+
+
+    <div class="w3-panel">
+        <h1 class="w3-theme w3-center" id="media">
+        <a href="#mediatop"><b>Media</b></h1></a>
+    </div>
+    
+
+    <h2>Fotos</h2>
+
+    <div class="imgConfig w3-center">
+    <img class="mySlides" src="img/Cats/c1.jpg" >
+    <img class="mySlides" src="img/Cats/c2.jpg" >
+    <img class="mySlides" src="img/Cats/c3.jpg" >
+    <img class="mySlides" src="img/Cats/c4.jpg" >
+    <img class="mySlides" src="img/Cats/c5.jpg" >
+
+    </div>
+
+
+
+    <h2>Videos</h2>
+
+   <!--  Mostrar outra pag web na minha..alguns sites necessitam de permissao 
+    <iframe src="https://sukicat.com/" style="height:200px;width:300px;"></iframe> -->
+    <div class="w3-center">
+        <iframe width="420" height="345" src="https://www.youtube.com/watch?v=hY7m5jjJ9mM">
+        </iframe>
+    </div>
+
+    <footer class="w3-container w3-theme w3-center">
+        <h5>Fun With Cats</h5>
+    </footer>
+
+
+</body>
+
+
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "inline-block";  
+            setTimeout(carousel, 1500); // Trocar imagem a cada 1.5 segundos
+        }
+    </script>
+
+</html>

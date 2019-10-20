@@ -1,0 +1,87 @@
+ul.a {
+            list-style-type: circle;
+        }
+
+        li.a{
+            float: right;
+        }
+
+        ul.bar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: lightseagreen;
+        }
+        
+        li.bar {
+            float: left;
+        }
+        
+        li.bar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 16px;
+            text-decoration: none;
+        }
+        
+        li.bar a:hover {
+            background-color: #111;
+        }
+
+        img{
+            display: none
+        }
+
+        span:hover + img{
+            display: block;
+        }
+
+        .mySlides {display:none;}
+
+        .imgConfig img {
+            border: 2px solid black;
+            padding: 10px;
+            position: relative;
+            float: none;
+            width:  1000px;
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+
+        .halfTop {
+            display: table;
+            width: 100%;
+            height: auto;
+            padding: 600px 0;
+            text-align: center;
+            color: white;
+            background: url(../img/sukiwall1.jpg) no-repeat bottom center scroll;
+            background-color: lightseagreen;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+        }
+        .w3-theme {
+            color:white !important; background-color: #2e0b16 !important
+        }
+        .w3-pagetheme {
+            background-color: lightseagreen !important
+        }
+
+        .w3-myfont {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        h1.top {
+            text-shadow: 3px 2px 8px black;
+            font-size : 36px ;
+            position: absolute;
+            left: 100px;
+            top: 150px;
+        }
+
+        
