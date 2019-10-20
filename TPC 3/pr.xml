@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM "file:/C:/Users/Duka_/Desktop/PLC/PRI/TPC/TPC3/pr.dtd">
+<pr>
+    <meta>
+        <keyname>PRI2019-A63129-T3</keyname>
+        <title>Elaboração de Website sobre Arqueositios </title>
+        <subtitle>Trabalho prático número três da UC PRI</subtitle>
+        <bdate>07-10-2019</bdate>
+        <edate>21-10-2019</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A63129</identifier>
+            <name>Duarte Freitas</name>
+            <email>a63129@alunos.uminho.pt</email>
+            <photo path="C:\Users\Duka_\Desktop\PLC\PRI\TPC\TPC3\cv.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p>
+            Elaboração do <b>XML</b> e posteriormente do <b>XSL</b> para o desenvolvimento desta pagina web  
+        </p>
+        <p>
+            Desenvolvimento do <b>XSL</b> para gerar paginas web com o conteudos do <b>XML</b> sobre <b>Arqueositios</b>
+        </p>
+       
+    </abstract>
+    <deliverables>
+        <deliverable path="pr.xml">XML do Project Record</deliverable>
+        <deliverable path="pr.xsl">XSL do Project Record</deliverable>
+        <deliverable path="pr.html">HTML do Project Record</deliverable>
+        <deliverable path="arq.xsl">XSL do Arqueositios</deliverable>
+        <deliverable path="website/index.html">Indice HTML do Arqueositios</deliverable>
+    </deliverables>
+</pr>
