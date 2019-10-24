@@ -18,6 +18,8 @@ Mestrado Integrado em Engenharia Informática
   - Resolução do exercício 6 da ficha 3: queries em XPAth;
   - Resolução do exercíco 5 da ficha 3: queries sobre a agenda.
   
-
+- [**TPC 3**](https://github.com/Dukawp/PRI-2019/tree/master/TPC%203) Transformações com XSLT.
+  - Especificação de uma stylesheet para transformar o PR.xml em PR.html;
+  - Especificação de uma stylesheet para gerar um website para os arqueossítios.
 ---
 
