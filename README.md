@@ -21,5 +21,8 @@ Mestrado Integrado em Engenharia Informática
 - [**TPC 3**](https://github.com/Dukawp/PRI-2019/tree/master/TPC%203) Transformações com XSLT.
   - Especificação de uma stylesheet para transformar o PR.xml em PR.html;
   - Especificação de uma stylesheet para gerar um website para os arqueossítios.
+
+- [**TPC 4**](https://github.com/Dukawp/PRI-2019/tree/master/TPC%204) Transformações com XSLT.
+
 ---
 
