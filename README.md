@@ -11,6 +11,9 @@ Mestrado Integrado em Engenharia Informática
 ---
 ## Descrição dos TPC
 
-- [**TPC 1**](https://github.com/Dukawp/BDnoSQL-2019/tree/master/aula1) Criação de uma página Web
+- [**TPC 1**](https://github.com/Dukawp/PRI-2019/tree/master/TPC%201/PRI2019-2020-A63129-T1) Criação de uma página Web.
+
+- [**TPC 2**](https://github.com/Dukawp/PRI-2019/tree/master/TPC%202) DTDs para validação de XML e queries XPath.
+
 ---
 
