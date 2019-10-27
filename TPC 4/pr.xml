@@ -33,11 +33,11 @@
         <deliverable path="pr.xml">XML do Project Record</deliverable>
         <deliverable path="pr.xsl">XSL do Project Record</deliverable>
         <deliverable path="pr.html">HTML do Project Record</deliverable>
-        <deliverable path="ArqSonEvo/arq-son-EVO.xml">XML do arquivo sonoro</deliverable>
-        <deliverable path="ArqSonEvo/arq2html.xsl">Stylesheet para converter o XML em HTML</deliverable>
-        <deliverable path="ArqSonEvo/cria-dataset.xsl">Stylesheet para partir o XML em dataset individuais</deliverable>
-        <deliverable path="ArqSonEvo/paginaErro.html">Pagina HTML para apresentar erro 404</deliverable>
-        <deliverable path="ArqSonEvo/serverArq.js">Servidor em NodeJS</deliverable>
+        <deliverable path="ArqSonEvo-NodeJS/arq-son-EVO.xml">XML do arquivo sonoro</deliverable>
+        <deliverable path="ArqSonEvo-NodeJS/arq2html.xsl">Stylesheet para converter o XML em HTML</deliverable>
+        <deliverable path="ArqSonEvo-NodeJS/cria-dataset.xsl">Stylesheet para partir o XML em dataset individuais</deliverable>
+        <deliverable path="ArqSonEvo-NodeJS/paginaErro.html">Pagina HTML para apresentar erro 404</deliverable>
+        <deliverable path="ArqSonEvo-NodeJS/serverArq.js">Servidor em NodeJS</deliverable>
     </deliverables>
     
 </pr>
