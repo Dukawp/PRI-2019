@@ -1,0 +1,35 @@
+extends layout
+block content
+    .w3-container
+        header
+            h1= aluno.nome
+        .w3-card-4
+            header.w3-container.w3-teal
+                h3 Registar nota
+            .w3-container
+                form.w3-container(action='/alunos/'+aluno.numero+'/notas' method='POST')
+                    label
+                        b Id
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='id')
+                    label 
+                        b Nota
+                    input.w3-input.w3-border.w3-light-grey(type='text' name='nota')
+                    input.w3-btn.w3-blue-grey(type='submit' value='Guardar')
+
+        .w3-card-4
+            header.w3-container.w3-teal
+                h3 Notas
+            .w3-container    
+                table.w3-table-all.w3-centered
+                    tr
+                        th Id
+                        th Nota
+                    each n in aluno.notas
+                        tr
+                            td= n.id
+                            td= n.nota
+                            td
+                                button.w3-button.w3-blue-grey(onclick="apagaNota('" + aluno.numero + '-' + n.id + "')") Apagar
+        footer.w3-container.w3-teal
+            address Gerado por Gestao de Alunos App
+                a(href='/alunos')  Voltar
