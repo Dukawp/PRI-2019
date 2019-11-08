@@ -1,0 +1,18 @@
+extends layout
+block content
+    .w3-container
+            header.w3-container.w3-teal
+                h1= filme.title
+                h3= filme.year
+            .w3-container
+                table.w3-table-all
+                    tr.w3-container
+                        th Lista de Actores:
+                    each actor in filme.cast
+                        tr.w3-container
+                            td= actor
+                    tr.w3-container
+                        th Lista de Generos:
+                    each genero in filme.genres
+                        tr.w3-container
+                            td= genero

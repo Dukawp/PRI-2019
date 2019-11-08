@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    .w3-container      
+        h1 Pesquisar filmes por:
+        table.w3-table-all
+            tr
+                td
+                    form.w3-container(action="/filmes/ano" method="post")
+                        label Ano:
+                        input.w3-input(type="text", name="year")
+                        input.w3-input(type="submit" value="Search")
+                td
+                    form.w3-container(action="/filmes/genero" method="get")
+                        label Genero:
+                        input.w3-input(type="text", name="genres")
+                        input.w3-input(type="submit" value="Search")  
+                
+                    
+    .w3-container
+        a(href='/filmes')  Voltar a listar todos
+        h1 Lista de filmes
+        table.w3-table-all
+            tr
+                th Titulo
+                th Ano
+                th Informação 
+            each filme in lista
+                tr
+                    td= filme.title
+                    td= filme.year
+                    td
+                        form.w3-container(action=`/filmes/${filme._id}` method='get')
+                                input.w3-btn.w3-border.w3-blue-grey(type='submit' value='Ver Filme')
