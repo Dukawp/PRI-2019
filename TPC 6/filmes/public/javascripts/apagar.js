@@ -14,3 +14,13 @@ function apagarActor(args){
         .then(response => window.location.assign(`/filmes/${id}`))
         .catch(error => console.log(error))
 }
+
+function apagarGenero(args){
+    var array = args.split('-')
+    var id = array[0]
+    var genero = array[1]
+    console.log('Vou apagar genero: '+  genero + "do filme :"+ id)
+    axios.delete(`/filmes/genero/${id}`, {data: {"genres": genero}})
+        .then(response => window.location.assign(`/filmes/${id}`))
+        .catch(error => console.log(error))
+}

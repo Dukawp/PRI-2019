@@ -81,6 +81,18 @@ router.post("/actor/:idFilme", function(req, res, next){
     })
 })
 
+/* PUT adicionar genero */
+router.post("/genero/:idFilme", function(req, res, next){
+  var idFilme = req.params.idFilme
+  console.log(req.body)
+  axios.post(`http://localhost:3006/api/filmes/genero/${req.params.idFilme}`, req.body)
+    .then(dados => {
+      res.redirect(`/filmes/${idFilme}`)
+    })
+    .catch(erro =>{
+      res.render('error', {error: erro})
+    })
+})
 
 /*DELETE de um Filme */
 router.delete("/:idFilme", function(req, res, next) {
@@ -96,6 +108,17 @@ router.delete("/:idFilme", function(req, res, next) {
 /*DELETE de um actor do filme X */
 router.delete("/actor/:idFilme", function(req, res, next) {
   axios.delete(`http://localhost:3006/api/filmes/actor/${req.params.idFilme}`, {data: {"cast": req.body.cast}})
+      .then(dados => {
+        res.redirect(`/filmes/${idFilme}`)
+      })
+      .catch(erro => {
+          res.render('error', {error: erro})
+      })
+})
+
+/*DELETE de um genero do filme X */
+router.delete("/genero/:idFilme", function(req, res, next) {
+  axios.delete(`http://localhost:3006/api/filmes/genero/${req.params.idFilme}`, {data: {"genres": req.body.genres}})
       .then(dados => {
         res.redirect(`/filmes/${idFilme}`)
       })

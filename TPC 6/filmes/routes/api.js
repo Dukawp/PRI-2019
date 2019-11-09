@@ -48,6 +48,13 @@ router.post('/filmes/actor/:idFilme', function(req, res, next){
     .catch(erro => res.status(500).json(erro))
 })
 
+/* POST inserir novo genero num filme */
+router.post('/filmes/genero/:idFilme', function(req, res, next){
+    Filmes.insereGenero(req.params.idFilme,req.body.genres)
+    .then(dados => res.json(dados))
+    .catch(erro => res.status(500).json(erro))
+})
+
 
 /* DELETE apagar um filme */
 router.delete('/filmes/:idFilme', function(req,res,next){
@@ -62,6 +69,14 @@ router.delete('/filmes/actor/:idFilme', function(req,res,next){
         .then(dados => res.jsonp(dados))
         .catch(erro => res.status(500).jsonp(erro))
 })
+
+/* DELETE apagar genero de um filme */
+router.delete('/filmes/genero/:idFilme', function(req,res,next){
+    Filmes.removeGenero(req.params.idFilme, req.body.genres)
+        .then(dados => res.jsonp(dados))
+        .catch(erro => res.status(500).jsonp(erro))
+})
+
 
 
 module.exports = router;
