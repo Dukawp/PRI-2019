@@ -7,12 +7,35 @@ block content
             .w3-container
                 table.w3-table-all
                     tr.w3-container
-                        th Lista de Actores:
+                        th Lista de Actores
+                        th Opções
                     each actor in filme.cast
                         tr.w3-container
+                            td= filme._id
                             td= actor
+                            td
+                                button.w3-button.w3-circle.w3-blue-grey(onclick="apagarActor('"+ filme._id + '-' + actor +"')") Apagar
+
                     tr.w3-container
                         th Lista de Generos:
                     each genero in filme.genres
                         tr.w3-container
                             td= genero
+                .w3-container      
+                        table.w3-table-all
+                            h3 Adicionar
+                            tr
+                                th 
+                                    form.w3-container(action=`/filmes/actor/${filme._id}` method="post")
+                                        label Actor:
+                                        input.w3-input(type="text", name="cast")
+                                        input.w3-input(type="submit" value="Adicionar")   
+                                th 
+                                    form.w3-container(action="/filmes/" method="post")
+                                        label Genero:
+                                        input.w3-input(type="text", name="genres")
+                                        input.w3-input(type="submit" value="Adicionar")  
+    footer.w3-container.w3-teal
+        address Gerado por Gestao de Filmes App:
+            a(href=`/filmes`)  Voltar aos filmes 
+            //Colocar o voltar a ir para o ano em que estava

@@ -40,3 +40,22 @@ module.exports.inserir = filme =>{
     var novo = new Filme(filme)
     return novo.save()
 }
+
+module.exports.removeFilme = id =>{
+    console.log("Remoção do filme : "+ id)
+    return Filme
+        .deleteOne({_id: id})
+        .exec()
+}
+
+module.exports.insereActor = (id,actor) =>{
+    console.log("Inserção do actor: " + actor + "no filme: " +id)
+    return Filme
+       .updateOne({ _id: id }, {$push : { cast: actor }})
+}
+
+module.exports.removeActor = (id,actor) =>{
+    console.log("Apagar o actor : " + actor + "do filme: " +id)
+    return Filme
+       .updateOne({ _id: id }, {$pull : { cast: actor }})
+}

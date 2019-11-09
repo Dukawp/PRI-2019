@@ -31,13 +31,26 @@ router.post('/ano', function(req, res, next){
       })
 })
 
+/* GET filmes de X genero*/
+router.post('/genero', function(req, res, next){
+  var gen = req.body.genres
+  console.log("Genero ::::: " + gen)
+  axios.get(`http://localhost:3006/api/filmes/genero/${gen}`)
+      .then( dados=> {
+        res.render('lista-filmes', {lista: dados.data})
+      })
+      .catch( erro=> {
+        res.render('error', {error: erro})
+      })
+})
+
 /*GET informaçao do filme X */
-router.get('/:idFilme', function(req, res) {
+router.get('/:idFilme', function(req, res,next) {
   var id = req.params.idFilme
   console.log("ID ::::: " + id)
   axios.get(`http://localhost:3006/api/filmes/${id}`)
       .then(dados => {
-          res.render('info-filme', {filme :dados.data})
+          res.render('info-filme', {filme: dados.data})
       })
       .catch(erro => {
           res.render('error', {error: erro})
@@ -45,11 +58,46 @@ router.get('/:idFilme', function(req, res) {
 })
 
 
-
-router.post('/', function(req, res){
+router.post('/', function(req, res,next){
   axios.post('http://localhost:3006/api/filmes', req.body)
       .then( dados => {
           res.redirect('/')
+      })
+      .catch(erro => {
+          res.render('error', {error: erro})
+      })
+})
+
+/* PUT adicionar novo actor  */
+router.post("/actor/:idFilme", function(req, res, next){
+  var idFilme = req.params.idFilme
+  console.log(req.body)
+  axios.post(`http://localhost:3006/api/filmes/actor/${req.params.idFilme}`, req.body)
+    .then(dados => {
+      res.redirect(`/filmes/${idFilme}`)
+    })
+    .catch(erro =>{
+      res.render('error', {error: erro})
+    })
+})
+
+
+/*DELETE de um Filme */
+router.delete("/:idFilme", function(req, res, next) {
+  axios.delete(`http://localhost:3006/api/filmes/${req.params.idFilme}`)
+      .then(dados => {
+          res.render('lista-filmes', {lista: dados.data})
+      })
+      .catch(erro => {
+          res.render('error', {error: erro})
+      })
+})
+
+/*DELETE de um actor do filme X */
+router.delete("/actor/:idFilme", function(req, res, next) {
+  axios.delete(`http://localhost:3006/api/filmes/actor/${req.params.idFilme}`, {data: {"cast": req.body.cast}})
+      .then(dados => {
+        res.redirect(`/filmes/${idFilme}`)
       })
       .catch(erro => {
           res.render('error', {error: erro})

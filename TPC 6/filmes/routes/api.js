@@ -34,9 +34,31 @@ router.get('/filmes/:idFilme', function(req, res, next) {
 
 
 
-/*POST: inserir um filme */
+/* POST inserir um filme */
 router.post('/filmes', function(req,res){
     Filmes.inserir(req.body)
+        .then(dados => res.jsonp(dados))
+        .catch(erro => res.status(500).jsonp(erro))
+})
+
+/* POST inserir novo actor num filme */
+router.post('/filmes/actor/:idFilme', function(req, res, next){
+    Filmes.insereActor(req.params.idFilme,req.body.cast)
+    .then(dados => res.json(dados))
+    .catch(erro => res.status(500).json(erro))
+})
+
+
+/* DELETE apagar um filme */
+router.delete('/filmes/:idFilme', function(req,res,next){
+    Filmes.removeFilme(req.params.idFilme)
+        .then(dados => res.jsonp(dados))
+        .catch(erro => res.status(500).jsonp(erro))
+})
+
+/* DELETE apagar actor de um filme */
+router.delete('/filmes/actor/:idFilme', function(req,res,next){
+    Filmes.removeActor(req.params.idFilme, req.body.cast)
         .then(dados => res.jsonp(dados))
         .catch(erro => res.status(500).jsonp(erro))
 })
