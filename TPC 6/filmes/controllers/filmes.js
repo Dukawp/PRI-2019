@@ -48,6 +48,8 @@ module.exports.removeFilme = id =>{
         .exec()
 }
 
+
+//------------------------Gestao do actor------------------------//
 module.exports.insereActor = (id,actor) =>{
     console.log("Inserção do actor: " + actor + " no filme: " +id)
     return Filme
@@ -60,16 +62,18 @@ module.exports.removeActor = (id,actor) =>{
        .updateOne({ _id: id }, {$pull : { cast: actor }})
 }
 
+
+//------------------------Gestao do genero------------------------//
+module.exports.insereGenero = (id,genero) =>{
+    console.log("Inserção do genero: " + genero + " no filme: " +id)
+    return Filme
+       .updateOne({ _id: id }, {$push : { genres: genero }})
+}
+
 module.exports.removeGenero = (id,genero) =>{
     console.log("Apagar o genero : " + genero + " do filme: " +id)
     return Filme
        .updateOne({ _id: id }, {$pull : { genres: genero }})
 }
 
-
-module.exports.insereGenero = (id,genero) =>{
-    console.log("Inserção do genero: " + genero + " no filme: " +id)
-    return Filme
-       .updateOne({ _id: id }, {$push : { genres: genero }})
-}
 

@@ -3,6 +3,7 @@ var router = express.Router();
 const axios = require('axios')
 
 var Filmes = require('../controllers/filmes')
+var Actores = require('../controllers/actores')
 
 /* GET lista de filmes */
 router.get('/filmes', function(req, res, next) {
@@ -77,6 +78,16 @@ router.delete('/filmes/genero/:idFilme', function(req,res,next){
         .catch(erro => res.status(500).jsonp(erro))
 })
 
+
+//------------------------Gestão da pagina dos actores------------------------//
+
+
+/* GET lista de actores */
+router.get('/actores', function(req, res, next) {
+    Actores.listarActores()
+    .then(dados => res.jsonp(dados))
+    .catch(erro => res.status(500).jsonp(erro))
+});
 
 
 module.exports = router;
