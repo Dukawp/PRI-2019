@@ -13,6 +13,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/obras', {useNewUrlParser: true, useU
 var indexRouter = require('./routes/index');
 var obrasRouter = require('./routes/obras');
 var apiRouter = require('./routes/api')
+var compositoresRouter = require('./routes/compositores')
 
 var app = express();
 
@@ -28,7 +29,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', apiRouter)
 app.use('/', indexRouter);
-app.use('/obras', obrasRouter);;
+app.use('/obras', obrasRouter);
+app.use('/compositores', compositoresRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
