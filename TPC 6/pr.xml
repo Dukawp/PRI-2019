@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRI2019-A63129-TPC6</keyname>
+        <title>Servidor Web</title>
+        <subtitle>Trabalho prático número seis da UC PRI</subtitle>
+        <bdate>03-11-2019</bdate>
+        <edate>11-11-2019</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A63129</identifier>
+            <name>Duarte Freitas</name>
+            <email>a63129@alunos.uminho.pt</email>
+            <photo path="img\cv.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p> <b>Servidor Web</b> em nodejs utilizando <b>framework Express</b>, <b>PUG</b> e <b>MongoDB</b></p>
+        <p> Objectivo deste trabalho é criar a base de dados com o dataset fornecido e responder a cada request feito pelo cliente</p>
+       
+    </abstract>
+    
+    <deliverables>
+        <deliverable path="pr.xml">XML do Project Record</deliverable>
+        <deliverable path="pr.xsl">XSL do Project Record</deliverable>
+        <deliverable path="pr.html">HTML do Project Record</deliverable>
+        <deliverable path="./filmes/controllers/filmes.js">Ficheiro que com um conjunto de queries que trata de para manipular o conteúdo sobre os filmes</deliverable>
+        <deliverable path="./filmes/controllers/actores.js">Ficheiro que com um conjunto de queries que trata de para manipular o conteúdo sobre os actores</deliverable>
+        <deliverable path="./filmes/models/filmes.js">Ficheiro que define o schema de Filmes</deliverable>
+        <deliverable path="./filmes/public/javascript/apagar.js">Ficheiro que processa os pedidos do cliente</deliverable>
+        <deliverable path="./filmes/routes/filmes.js">Ficheiro que define as rotas necessárias para cada request do cliente em /filmes</deliverable>
+        <deliverable path="./filmes/routes/actores.js">Ficheiro que define as rotas necessárias para cada request do cliente em /actores</deliverable>
+        <deliverable path="./filmes/routes/api.js">API</deliverable>
+        <deliverable path="./filmes/views">Template para cada página apresentada ao cliente</deliverable>
+    </deliverables>
+    
+</pr>
