@@ -11,6 +11,18 @@ router.get('/', function(req, res, next){
         .catch( erro=> {
           res.render('error', {error: erro})
         })
-  })
+})
+
+/* GET todos os compositores */
+router.get('/:id', function(req, res, next){
+  axios.get(`http://localhost:3011/api/compositores/${req.params.id}`)
+      .then( dados=> {
+        res.render('info-comp', {comp: dados.data})
+      })
+      .catch( erro=> {
+        res.render('error', {error: erro})
+      })
+})
+
 
 module.exports = router;

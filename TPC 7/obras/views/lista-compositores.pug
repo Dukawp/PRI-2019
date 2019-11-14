@@ -10,6 +10,10 @@ block content
                     tr
                         td= comp._id
                         td= comp.numObras
+                        td
+                            form.w3-container(action=`/compositores/${comp._id}` method='get')
+                                input.w3-btn.w3-border.w3-blue-grey(type='submit' value='Ver compositor')
+              
                        
     footer.w3-container.w3-teal
         address Gerado por Gestao de Obras App:

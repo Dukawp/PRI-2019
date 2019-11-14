@@ -41,7 +41,8 @@ router.get('/compositores', function(req, res) {
 
 /* GET recupera a infomação de um compositor */
 router.get('/compositores/:id', function(req, res) {
-    Compositores.consultar(req.params.id)
+    console.log(req.params.id)
+    Compositores.verCompositor(req.params.id)
           .then(dados => res.jsonp(dados))
           .catch(erro => res.status(500).jsonp(erro))
 });

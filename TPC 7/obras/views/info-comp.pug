@@ -1,0 +1,16 @@
+extends layout
+block content
+    .w3-container
+        
+        table.w3-table-all
+            tr.w3-container
+                th Obra
+                th Descrição
+                    each obra in comp
+                        tr.w3-container
+                            td= obra.nome
+                            td= obra.desc
+
+    footer.w3-container.w3-teal
+        address Gerado por Gestao de Obras App:
+            a(href=`/`)  Voltar página inicial 
