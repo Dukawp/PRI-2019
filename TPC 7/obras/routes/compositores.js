@@ -13,7 +13,7 @@ router.get('/', function(req, res, next){
         })
 })
 
-/* GET todos os compositores */
+/* GET de um compositor */
 router.get('/:id', function(req, res, next){
   axios.get(`http://localhost:3011/api/compositores/${req.params.id}`)
       .then( dados=> {

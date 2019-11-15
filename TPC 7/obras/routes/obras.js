@@ -3,7 +3,7 @@ var router = express.Router();
 const axios = require('axios')
 
 
-/* GET todos os filmes */
+/* GET todas obras */
 router.get('/', function(req, res, next){
     axios.get('http://localhost:3011/api/obras')
         .then( dados=> {
