@@ -1,6 +1,21 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+
+    .w3-container
+        br
+        h1
+            center 
+                strong Lista de Obras
+        hr
+        div(style="text-align: center")
+          p= message + " -> error " + error.status
+        hr
+        br
+        h3 
+          center  Congratulations, you broke the Internet...
+        hr
+        br
+        h6
+            a(href="/") <center>Voltar à <i>Homepage</i></center>
+        hr
