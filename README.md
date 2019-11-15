@@ -22,7 +22,12 @@ Mestrado Integrado em Engenharia Informática
   - Especificação de uma stylesheet para transformar o PR.xml em PR.html;
   - Especificação de uma stylesheet para gerar um website para os arqueossítios.
 
-- [**TPC 4**](https://github.com/Dukawp/PRI-2019/tree/master/TPC%204) Servidor de ficheiros (NodeJS).
+- [**TPC 4**](https://github.com/Dukawp/PRI-2019/tree/master/TPC%204) Servidor de ficheiros (NodeJS)
+
+- [**TPC 5**](https://github.com/Dukawp/PRI-2019/tree/master/TPC%205) Servidor de ficheiros (NodeJS)
+
+- [**TPC 6**](https://github.com/Dukawp/PRI-2019/tree/master/TPC%206) Servidor de ficheiros (Express + Pug + MongoDB)
+
 
 ---
 
