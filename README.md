@@ -26,8 +26,12 @@ Mestrado Integrado em Engenharia Informática
 
 - [**TPC 5**](https://github.com/Dukawp/PRI-2019/tree/master/TPC%205) Servidor de ficheiros (NodeJS)
 
-- [**TPC 6**](https://github.com/Dukawp/PRI-2019/tree/master/TPC%206) Servidor de ficheiros (Express + Pug + MongoDB)
+- [**TPC 6**](https://github.com/Dukawp/PRI-2019/tree/master/TPC%206) Servidor de ficheiros (Express + API + Pug + MongoDB)
 
+- [**TPC 7**](https://github.com/Dukawp/PRI-2019/tree/master/TPC%207) Servidor de ficheiros (Express + API + Pug + MongoDB)
 
 ---
 
+- [**Project**] () Projecto
+
+---
