@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <keyname>PRI2019-A63129-TPC7</keyname>
+        <title>Servidor de Ficheiros (Express, Pug, MongoDB, API) </title>
+        <subtitle>Trabalho prático número sete da UC PRI</subtitle>
+        <bdate>11-11-2019</bdate>
+        <edate>18-11-2019</edate>
+        <supervisor>
+            <name>José Carlos Ramalho</name>
+            <email>jcr@di.uminho.pt</email>
+            <homepage>http://www4.di.uminho.pt/~jcr/</homepage>
+        </supervisor>
+    </meta>
+    <workteam>
+        <member>
+            <identifier>A63129</identifier>
+            <name>Duarte Freitas</name>
+            <email>a63129@alunos.uminho.pt</email>
+            <photo path="img\cv.jpeg"/>
+        </member>
+    </workteam>
+    <abstract>
+        <p> <b>Servidor Web</b> em nodejs utilizando <b>framework Express</b>, <b>PUG</b> e <b>MongoDB</b></p>
+        <p> Objectivo deste trabalho é criar uma base de dados com o dataset fornecido,uma API (Application Programming Interface) para interagir com todo o sistema e a interface para tratar de toda a interação com o client.</p>
+       
+    </abstract>
+    
+    <deliverables>
+        <deliverable path="pr.xml">XML do Project Record</deliverable>
+        <deliverable path="pr.xsl">XSL do Project Record</deliverable>
+        <deliverable path="pr.html">HTML do Project Record</deliverable>
+        <deliverable path="./obras/controllers/obras.js">Ficheiro que com um conjunto de queries que trata de para manipular o conteúdo sobre as obras</deliverable>
+        <deliverable path="./obras/controllers/compositores.js">Ficheiro que com um conjunto de queries que trata de para manipular o conteúdo sobre os compositores</deliverable>
+        <deliverable path="./obras/models/obras.js">Ficheiro que define o schema de obras</deliverable>
+        <deliverable path="./obras/routes/obras.js">Ficheiro que define as rotas necessárias para cada request do cliente em /obras</deliverable>
+        <deliverable path="./obras/routes/compositores.js">Ficheiro que define as rotas necessárias para cada request do cliente em /compositores</deliverable>
+        <deliverable path="./obras/routes/api.js">API</deliverable>
+        <deliverable path="./obras/views">Template para cada página apresentada ao cliente</deliverable>
+    </deliverables>
+    
+</pr>
