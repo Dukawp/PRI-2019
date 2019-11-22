@@ -19,9 +19,7 @@ router.post('/ficheiros', upload.array('ficheiro'), function(req,res){
     var listaErros = []
     for(let i = 0 ; i < req.files.length ; i++){
         let oldPath = __dirname + '/../' + req.files[i].path
-        console.log('O CAMINHO ONDE VOU BUSCAR  -> '+oldPath)
         let newPath = __dirname + '/../public/ficheiros/' + req.files[i].originalname
-        console.log('ONDE VOU GUARDAR -> ' + newPath)
         fs.rename(oldPath, newPath, function(err) {
             if (err) throw err
         })
