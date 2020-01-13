@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .w3-container
+      h1(style="text-align:center;") Tipologia
+
+
+  .w3-container
+        table.w3-table-all
+            tr
+                th Estado
+                th Sigla
+                th Designação
+                th Opções
+                    tr
+                        td= lista.estado
+                        td= lista.sigla
+                        td= lista.designacao
+                        td
+                            form.w3-container(action=`/tipologias/tip_${lista.sigla}/elementos` method='get')
+                                input.w3-btn.w3-border.w3-blue-grey(type='submit' value='Ver')
+                        td
+                            form.w3-container(action=`/tipologias/tip_${lista.sigla}/intervencao/dono` method='get')
+                                input.w3-btn.w3-border.w3-blue-grey(type='submit' value='Ver dono')        
+        footer.w3-container.w3-teal
+        a(href='/')  Voltar inicio

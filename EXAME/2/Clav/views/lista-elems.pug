@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .w3-container
+      h1(style="text-align:center;") Elementos da Tipologia
+
+
+  .w3-container
+        table.w3-table-all
+            tr
+                th Sigla
+                th Designação
+                each tipo in lista
+                    tr
+                        td= tipo.sigla
+                        td= tipo.designacao
+        
+        a(href=`/tipologias/${id}`)  Voltar a tipologia
+        footer.w3-container.w3-teal
+        a(href='/')  Voltar inicio

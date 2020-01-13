@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  .w3-container
+      h1(style="text-align:center;") Entidade
+
+
+  .w3-container
+        table.w3-table-all
+            tr
+                th Estado
+                th Sigla
+                th Sioe
+                th Designação
+                th Internacional
+                th Opções
+                    tr
+                        td= lista.estado
+                        td= lista.sigla
+                        td= lista.sioe
+                        td= lista.designacao
+                        td= lista.internacional
+                        td
+                            form.w3-container(action=`/entidades/${id}/tipologias` method='get')
+                                input.w3-btn.w3-border.w3-blue-grey(type='submit' value='Ver')
+        footer.w3-container.w3-teal
+        a(href='/')  Voltar inicio

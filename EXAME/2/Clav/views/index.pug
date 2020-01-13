@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .w3-container
+      h1(style="text-align:center;") Clav
+      p(style="text-align:center;") Classificação e Avaliação da Informação Pública
+
+
+  .w3-container
+        h1 Lista de Tipologias
+        table.w3-table-all
+            tr
+                th Estado
+                th Sigla
+                th Designação
+                th id
+                th Opções
+                each tipo in lista
+                    tr
+                        td= tipo.estado
+                        td= tipo.sigla
+                        td= tipo.designacao
+                        td= tipo.id
+                        td
+                            form.w3-container(action=`/tipologias/${tipo.id}` method='get')
+                                input.w3-btn.w3-border.w3-blue-grey(type='submit' value='Ver')
+                        //td
+                            button.w3-button.w3-circle.w3-blue-grey(onclick="apagarTrack('"+ track._id +"')") Apagar
+        footer.w3-container.w3-teal
